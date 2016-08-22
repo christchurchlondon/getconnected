@@ -15,7 +15,7 @@
 	  margin: 0px;
 	  font-family: futura-pt, sans-serif;
 	  color: white;
-	  font-size: 3.2em;
+	  font-size: 2.8em;
 	  line-height: 1em;
 	  margin-bottom:8px;
 	  font-weight: 700;
@@ -33,6 +33,7 @@
 	p.lead {
 	  font-family: futura-pt, sans-serif;
 	  color: white;
+	  margin-bottom: 0;	
 	}
 }
 /* Small devices (landscape phones, 544px and up) */
@@ -122,19 +123,27 @@ header {}
  */
 
 .cover {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 20px 20px;
 }
 
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+.ccl-logo {
+	width: 80px;
+	position: absolute;
+	top:0;
+	right: 20px;
 }
 
 @media (min-width: 768px) {
    /* Handle the widths */
   .cover {
-	padding: 20px 80px 40px 80px;  
+	padding: 20px 40px 40px 40px;  
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .ccl-logo {
+	width: 120px;
+	position: absolute;
+	top:0;
+	right: 40px;
   }
 }
 
@@ -142,31 +151,41 @@ header {}
   .cover {
 
   }
+  .ccl-logo {
+	width: 120px;
+	position: absolute;
+	top:0;
+	right: 40px;
+  }
 }
 
 /* The Form + Footer */
 
 .the-form,
 footer {
-	padding: 10px 20px 20px 20px;
+	padding: 16px 20px 20px 20px;
 }
 
 .form-control /* Seams to provide most styles for inputs */ {
 	background-color: #DDD;
 	border-radius: 0;
-	box-shadow: 0;
+	box-shadow: none;;
 	border: none;
+	-webkit-box-shadow: none;
 }
-label {
+label, legend {
 	color: #666;
 	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
    /* Handle the widths */
   .the-form,
   footer {
-	padding: 10px 80px 40px 80px;  
+	padding: 40px 80px 40px 80px;  
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
@@ -176,6 +195,13 @@ label {
   footer {
     width: 900px;
     margin: auto;
+  }
+}
+
+/* Zoom Hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  .form-control {
+    font-size: 16px;
   }
 }
 /*

@@ -14,11 +14,14 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	
+	<!-- Custom Input Gliphs -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	
-	<!-- Custom styles for this template -->
 	<link href="css/cover.css" rel="stylesheet">
+	<link href="css/custom-input.css" rel="stylesheet">
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -36,7 +39,8 @@
 	<div class="site-wrapper" style="background-image: url(img/cover.png);">
 	
 		<div class="site-wrapper-inner">
-		
+			
+			<img class="ccl-logo" src="img/logo-2.png" alt="CCL-Logo" />
 			<div class="cover-container">
 				<div class="inner cover">
 					<h1 class="cover-heading">GET CONNECTED.</h1>
@@ -95,11 +99,31 @@
 					<input type="radio" name="inlineRadioOptions" id="east" value="east"> East
 				</label>
 			</fieldset>
+			
+			<h2>Custom Radios</h2>
+			<div class="btn-group" data-toggle="buttons">
+				<label class="btn active">
+					<input type="radio" name='gender2' checked><i class="fa fa-check-square-o" aria-hidden="true"></i><span> South</span>
+				</label>
+				<label class="btn">
+					<input type="radio" name='gender2'><i class="fa fa-check-square-o" aria-hidden="true"></i><span> Central</span>
+				</label>
+				
+				<label class="btn active">
+					<input type="radio" name='service-a' checked><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> Marketing Email</span>
+				</label>
+				  <label class="btn">
+					<input type="radio" name='service-a'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Alert Email</span>
+				</label>
+			</div>
+
+
 				
 			<!-- Connect Groups -->
 			<div class="form-group">
 			    <label for="connect-groups">I'm interested in connect groups:</label>
 			    <select class="form-control" id="connect-groups">
+			    	<optgroup label="Central">
 			    	<option>1</option>
 			    	<option>2</option>
 			    	<option>3</option>
@@ -110,7 +134,7 @@
 			
 			<!-- Serving Teams -->
 			<fieldset class="form-group">
-				<legend>I'm interested in serving teams</legend>
+				<legend>I'm interested in serving teams:</legend>
 				<div class="checkbox">
 					<label>
 					  <input type="checkbox" value="families">
@@ -151,7 +175,7 @@
 			
 			<!-- Courses, checklist -->
 			<fieldset class="form-group">
-				<legend>I'm interested in courses</legend>
+				<legend>I'm interested in courses:</legend>
 				<div class="checkbox">
 					<label>
 					  <input type="checkbox" value="alpha">

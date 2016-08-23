@@ -180,6 +180,9 @@ label, legend {
 	border: none;
 	margin-bottom: 0;
 }
+.radio-inline {
+}
+
 
 @media (min-width: 768px) {
    /* Handle the widths */

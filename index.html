@@ -13,15 +13,12 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Custom Input Gliphs -->
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	
 	<link href="css/cover.css" rel="stylesheet">
-	<link href="css/custom-input.css" rel="stylesheet">
+	<link href="css/custom-inputs.css" rel="stylesheet">
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -84,6 +81,7 @@
 			</fieldset>
 			
 			<!-- Service -->
+<!--
 			<fieldset class="form-group"> 
 				<legend>Which service did you attend?</legend>
 				<label class="radio-inline">
@@ -99,24 +97,37 @@
 					<input type="radio" name="inlineRadioOptions" id="east" value="east"> East
 				</label>
 			</fieldset>
+-->
 			
-			<h2>Custom Radios</h2>
-			<div class="btn-group" data-toggle="buttons">
-				<label class="btn active">
-					<input type="radio" name='gender2' checked><i class="fa fa-check-square-o" aria-hidden="true"></i><span> South</span>
-				</label>
-				<label class="btn">
-					<input type="radio" name='gender2'><i class="fa fa-check-square-o" aria-hidden="true"></i><span> Central</span>
-				</label>
-				
-				<label class="btn active">
-					<input type="radio" name='service-a' checked><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> Marketing Email</span>
-				</label>
-				  <label class="btn">
-					<input type="radio" name='service-a'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Alert Email</span>
-				</label>
-			</div>
-
+			<fieldset class="form-group"> 
+				<legend>Which service did you attend?</legend>
+				<ul>
+					<li>
+						<input type="radio" id="south" name="selector">
+						<label for="south">South</label>
+						
+						<div class="check"></div>
+					</li>
+					<li>
+						<input type="radio" id="central" name="selector">
+						<label for="central">Central</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="radio" id="westend" name="selector">
+						<label for="westend">West End</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="radio" id="east" name="selector">
+						<label for="east">East</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>
+			</fieldset>
 
 				
 			<!-- Connect Groups -->

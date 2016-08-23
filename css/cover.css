@@ -63,18 +63,6 @@ a:focus,
 a:hover {
   color: #0093d0;
 }
-/* 
-* Custom default button
-*/
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
 
 /*
  * Base structure
@@ -160,6 +148,7 @@ header {}
 }
 
 /* The Form + Footer */
+/*Input styling is done in seperate css file*/
 
 .the-form,
 footer {
@@ -180,8 +169,7 @@ label, legend {
 	border: none;
 	margin-bottom: 0;
 }
-.radio-inline {
-}
+
 
 
 @media (min-width: 768px) {

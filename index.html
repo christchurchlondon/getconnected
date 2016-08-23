@@ -19,6 +19,7 @@
 	
 	<link href="css/cover.css" rel="stylesheet">
 	<link href="css/custom-inputs.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-select.css">
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -81,27 +82,9 @@
 			</fieldset>
 			
 			<!-- Service -->
-<!--
 			<fieldset class="form-group"> 
 				<legend>Which service did you attend?</legend>
-				<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="south" value="south"> South
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="central" value="central"> Central
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="westend" value="westend"> West End
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="east" value="east"> East
-				</label>
-			</fieldset>
--->
-			
-			<fieldset class="form-group"> 
-				<legend>Which service did you attend?</legend>
-				<ul>
+				<ul class="service">
 					<li>
 						<input type="radio" id="south" name="selector">
 						<label for="south">South</label>
@@ -131,6 +114,7 @@
 
 				
 			<!-- Connect Groups -->
+<!--
 			<div class="form-group">
 			    <label for="connect-groups">I'm interested in connect groups:</label>
 			    <select class="form-control" id="connect-groups">
@@ -140,104 +124,136 @@
 			    	<option>3</option>
 			    	<option>4</option>
 			    	<option>5</option>
+			    	</optgroup>
 			    </select>
 			</div>
+-->
 			
+			<div class="form-group">
+			    <label for="connect-groups">I'm interested in connect groups:</label>
+			    <select class="selectpicker form-control">
+					<optgroup label="Picnic">
+						<option>Mustard</option>
+						<option>Ketchup</option>
+						<option>Relish</option>
+					</optgroup>
+					<optgroup label="Camping">
+						<option>Tent</option>
+						<option>Flashlight</option>
+						<option>Toilet Paper</option>
+					</optgroup>
+				</select>
+			</div>
+						
 			<!-- Serving Teams -->
 			<fieldset class="form-group">
 				<legend>I'm interested in serving teams:</legend>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="families">
-					  Families Team
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="prayer">
-					  Prayer Team
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="production">
-					  Production
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="tech">
-					  Tech
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="welcome">
-					  Welcome
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="worship">
-					  Worship
-					</label>
-				</div>
+				<ul class="serving-teams">
+					<li>
+						<input type="checkbox" id="families" value="families">
+						<label for="families">Families Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="prayer" value="prayer">
+						<label for="prayer">Prayer Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="production" value="production">
+						<label for="production">Production Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="tech" value="tech">
+						<label for="tech">Tech Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="welcome" value="welcome">
+						<label for="welcome">Welcome Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="worship" value="worship">
+						<label for="worship">Worship Team</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>
 			</fieldset>
 			
 			<!-- Courses, checklist -->
 			<fieldset class="form-group">
 				<legend>I'm interested in courses:</legend>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="alpha">
-					  Alpha
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="marriage-preparation">
-					  Marriage Preparation 
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="pastoral-support">
-					  Pastoral support
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-					  <input type="checkbox" value="steps">
-					  Steps
-					</label>
-				</div>
-			</fieldset>
-			
+				<ul>
+					<li>
+						<input type="checkbox" id="alpha" value="alpha">
+						<label for="alpha">Alpha</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="marriage-preparation" value="marriage-preparation">
+						<label for="marriage-preparation">Marriage Preparation</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="pastoral-support" value="pastoral-support">
+						<label for="pastoral-support">Pastoral Support</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="steps" value="steps">
+						<label for="steps">Steps</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>
+			</fieldset>		
+					
 			<!-- Welcome Events opt in -->
 			<div class="form-group">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox"> I'd like to know more about welcome events
-					</label>
-				</div>
+				<ul>
+					<li>
+						<input type="checkbox" id="welcome-events" value="welcome-events">
+						<label for="welcome-events">I'd like to know more about welcome events</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>	
 			</div>
 			
 			<!-- Newsletter opt in -->
 			<div class="form-group">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox"> I'd like to sign up to CCL newsletter
-					</label>
-				</div>
+				<ul>
+					<li>
+						<input type="checkbox" id="newsletter" value="newsletter">
+						<label for="newsletter">I'd like to sign up to CCL newsletter</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>
 			</div>
 			
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<br/>
+			<button type="submit" class="btn btn-primary btn-submit">Submit ></button>
 		</form>
 	</div>
 	
 	<footer>
-		<p>Smallprint</p>
-		<p>&copy; Copyright ChristChurch London 2016</p>
+		<p>By providing your personal details you agree to allow ChristChurch London to contact you by email, telephone or text message in order to give you the best possible welcome and to help you connect with us. We may send you invites to events we are running that we feel may be relevant to you. We will also sign you up to our email list to help you find out about news and events which we think will be of interest to you. To do all this, your information will be transferred outside the EU, and may also be passed to individuals within the church who are organising events for newcomers.</p>
+		<p>Privacy is important to us. We will never disclose your information to anyone outside ChristChurch London without your prior permission.</p>
+		<hr/>
+		<p>Copyright © 2016 ChristChurch London. All rights reserved.</p>
+		<p>ChristChurch London, The Matrix Complex, 91 Peterborough Road, London, SW6 3BU</p>
 	</footer>
 	
 	<!-- Bootstrap core JavaScript
@@ -246,6 +262,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>

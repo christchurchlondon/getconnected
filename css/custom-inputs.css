@@ -2,14 +2,20 @@ form ul {
 	padding-left: 0;
 }
 
-ul li{
+ul li {
   color: #666;
-  display: inline;
+  display: block;
   position: relative;
+}
+
+ul.service li{
+  display: inline;
   float: left;
 }
 
-ul li input[type=radio]{
+
+ul li input[type=radio],
+ul li input[type=checkbox]{
   position: absolute;
   visibility: hidden;
 }
@@ -17,12 +23,15 @@ ul li input[type=radio]{
 ul li label{
   display: block;
   position: relative;
-  padding: 0px 25px 25px 34px;
+  padding: 10px 25px 25px 34px;
   margin: 10px auto;
   height: 20px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
+}
+ul.service li label {
+  padding-top: 0px;
 }
 
 ul li .check{ /*The non-hovered checkbox outline*/
@@ -55,14 +64,53 @@ ul li .check::before { /* ?? */
   -webkit-transition: background 0.25s linear;
 }
 
-input[type=radio]:checked ~ .check {
+input[type=radio]:checked ~ .check,
+input[type=checkbox]:checked ~ .check {
   border: 3px solid #DDD;
 }
 
-input[type=radio]:checked ~ .check::before{ /*Checked Radio Colour*/
+input[type=radio]:checked ~ .check::before,
+input[type=checkbox]:checked ~ .check::before{ /*Checked Radio Colour*/
   background: #DDD;
 }
 
-input[type=radio]:checked ~ label{ /*Checked Label Colour*/
+input[type=radio]:checked ~ label,
+input[type=checkbox]:checked ~ label{ /*Checked Label Colour*/
   color: #666;
 }
+
+/*Other stuff*/
+.bootstrap-select .btn-default{
+	background-color:#DDD;
+}
+.btn-submit {
+	font-family: futura-pt, sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	border-radius: 0;
+	background-image: url(../img/cover.png);
+	background-size: cover;
+	text-shadow: 1px 1px #333;
+/* 	box-shadow: 0 0px 6px 2px rgba(0,0,0,0.12), 0 0px 6px 2px rgba(0,0,0,0.24); */
+}
+
+.btn-submit:hover {
+	
+}
+
+.btn-submit  {
+	font-family: futura-pt, sans-serif; 
+	color: white; 
+/* 	background: linear-gradient(to top right, #e35d12, #e2007a);  */
+	border: none;
+	text-transform: uppercase; 
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 2em; 
+	padding: 16px;
+	margin-bottom: 24px;
+/* 	width:33%; */
+	
+	}
+
+.btn-submit:hover {/* color:white; background: #CCC;  */cursor: pointer;box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.24);}

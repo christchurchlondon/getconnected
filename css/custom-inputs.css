@@ -33,6 +33,10 @@ ul li label{
 ul.service li label {
   padding-top: 0px;
 }
+ul li label:hover{
+	color: black;
+	-webkit-transition: all 0.25s linear;
+}
 
 ul li .check{ /*The non-hovered checkbox outline*/
   display: block;
@@ -41,14 +45,13 @@ ul li .check{ /*The non-hovered checkbox outline*/
   height: 25px;
   width: 25px;
   top: 8px;
-/*   left: 20px; */
-	z-index: 5;
-	transition: border .25s linear;
-	-webkit-transition: border .25s linear;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
 }
 
 ul li:hover .check { /*The hovered checkbox outline*/
-  border: 5px solid #DDD;
+  border: 5px solid black;
 }
 
 ul li .check::before { /* ?? */
@@ -66,51 +69,131 @@ ul li .check::before { /* ?? */
 
 input[type=radio]:checked ~ .check,
 input[type=checkbox]:checked ~ .check {
-  border: 3px solid #DDD;
+  border: 3px solid black;
 }
 
 input[type=radio]:checked ~ .check::before,
 input[type=checkbox]:checked ~ .check::before{ /*Checked Radio Colour*/
-  background: #DDD;
+  background: black;
 }
 
 input[type=radio]:checked ~ label,
 input[type=checkbox]:checked ~ label{ /*Checked Label Colour*/
-  color: #666;
+  color: black;
+}
+
+/*Families Colour*/
+li.families-check,
+li.families-check label,
+li.families-check label:hover,
+li.families-check input[type=checkbox]:checked ~ label {
+	color:#ce684b; 
+}
+li.families-check .check,
+li.families-check:hover .check,
+li.families-check input[type=checkbox]:checked ~ .check {border-color: #ce684b;}
+
+li.families-check input[type=checkbox]:checked ~ .check::before {
+	background:#ce684b;
+}
+/*prayer Colour*/
+li.prayer-check,
+li.prayer-check label,
+li.prayer-check label:hover,
+li.prayer-check input[type=checkbox]:checked ~ label {
+	color:#00b1e8; 
+}
+li.prayer-check .check,
+li.prayer-check:hover .check,
+li.prayer-check input[type=checkbox]:checked ~ .check {border-color: #00b1e8;}
+
+li.prayer-check input[type=checkbox]:checked ~ .check::before {
+	background:#00b1e8;
+}
+/*production Colour*/
+li.production-check,
+li.production-check label,
+li.production-check label:hover,
+li.production-check input[type=checkbox]:checked ~ label {
+	color:#0099a2; 
+}
+li.production-check .check,
+li.production-check:hover .check,
+li.production-check input[type=checkbox]:checked ~ .check {border-color: #0099a2;}
+
+li.production-check input[type=checkbox]:checked ~ .check::before {
+	background:#0099a2;
+}
+/*tech Colour*/
+li.tech-check,
+li.tech-check label,
+li.tech-check label:hover,
+li.tech-check input[type=checkbox]:checked ~ label {
+	color:#88449d; 
+}
+li.tech-check .check,
+li.tech-check:hover .check,
+li.tech-check input[type=checkbox]:checked ~ .check {border-color: #88449d;}
+
+li.tech-check input[type=checkbox]:checked ~ .check::before {
+	background:#88449d;
+}
+/*welcome Colour*/
+li.welcome-check,
+li.welcome-check label,
+li.welcome-check label:hover,
+li.welcome-check input[type=checkbox]:checked ~ label {
+	color:#fdc216; 
+}
+li.welcome-check .check,
+li.welcome-check:hover .check,
+li.welcome-check input[type=checkbox]:checked ~ .check {border-color: #fdc216;}
+
+li.welcome-check input[type=checkbox]:checked ~ .check::before {
+	background:#fdc216;
+}
+/*worship Colour*/
+li.worship-check,
+li.worship-check label,
+li.worship-check label:hover,
+li.worship-check input[type=checkbox]:checked ~ label {
+	color:#e30083; 
+}
+li.worship-check .check,
+li.worship-check:hover .check,
+li.worship-check input[type=checkbox]:checked ~ .check {border-color: #e30083;}
+
+li.worship-check input[type=checkbox]:checked ~ .check::before {
+	background:#e30083;
 }
 
 /*Other stuff*/
 .bootstrap-select .btn-default{
-	background-color:#DDD;
-}
-.btn-submit {
-	font-family: futura-pt, sans-serif;
-	font-weight: 900;
-	text-transform: uppercase;
+	background-color: #DDD;
 	border-radius: 0;
-	background-image: url(../img/cover.png);
-	background-size: cover;
-	text-shadow: 1px 1px #333;
-/* 	box-shadow: 0 0px 6px 2px rgba(0,0,0,0.12), 0 0px 6px 2px rgba(0,0,0,0.24); */
-}
-
-.btn-submit:hover {
-	
+	box-shadow: none;;
+	border: none;
+	-webkit-box-shadow: none;
 }
 
 .btn-submit  {
 	font-family: futura-pt, sans-serif; 
 	color: white; 
-/* 	background: linear-gradient(to top right, #e35d12, #e2007a);  */
 	border: none;
 	text-transform: uppercase; 
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.8em;
 	line-height: 2em; 
-	padding: 16px;
-	margin-bottom: 24px;
-/* 	width:33%; */
-	
-	}
-
-.btn-submit:hover {/* color:white; background: #CCC;  */cursor: pointer;box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.24);}
+	padding: 16px 32px;
+	background-size: cover;
+	border-radius: 0;
+	background-image: url(../img/cover.png);
+	text-shadow: 1px 1px #333;
+}
+.btn-submit:hover {cursor: pointer;box-shadow: 0px 4px 2px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);}
+.btn-submit:active {
+	border: 2px solid black;
+	color: black;
+	background: white;
+	text-shadow: none;
+}

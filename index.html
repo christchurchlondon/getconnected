@@ -42,7 +42,6 @@
 			<div class="cover-container">
 				<div class="inner cover">
 					<h1 class="cover-heading">GET CONNECTED.</h1>
-					<p class="lead">We think friendship really matters, so we would love to help you get connected, build relationships and make the most of your time at ChristChurch London.</p>
 				</div>
 			</div>
 		
@@ -51,39 +50,55 @@
 	</div>
 	
 	<div class="the-form">
-		<form>
+		<form data-toggle="validator" role="form">
 			<!-- Who -->
 			<fieldset>
-				<!-- Title -->
-				<div class="form-group">
-					<label for="title">Title:</label>
-					<input type="text" class="form-control" id="title" aria-describedby="basic-addon3">
-				</div>
-				<!-- Name -->
-				<div class="form-group">
-					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name" aria-describedby="basic-addon3">
+				<div class="row">
+					<!-- Title -->
+					<div class="form-group col-sm-2">
+						<label for="title">Title:</label>
+						<input type="text" class="form-control" id="title" aria-describedby="basic-addon3">
+					</div>
+					<!-- Name -->
+					<div class="form-group col-sm-10">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name" aria-describedby="basic-addon3" required>
+						<div class="help-block with-errors"></div>
+					</div>
 				</div>
 			</fieldset>
 			
+			<hr/>
+			
 			<!-- Contact -->
-			<fieldset>
-				<legend>Preferred method of contact:</legend>
+			<fieldset class="contact">
+				<legend class="special">Preferred method of contact:</legend>
 				<!-- Email -->
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="text" class="form-control" id="email" aria-describedby="basic-addon3">
+				<div class="form-group row">
+					<div class="col-sm-1">
+						<label for="email">Email:</label>
+					</div>
+					<div class="col-sm-11">
+						<input type="email" class="form-control" id="email" aria-describedby="basic-addon3" required>
+						<div class="help-block with-errors"></div>
+					</div>
 				</div>
 				<!-- Phone -->
-				<div class="form-group">
-					<label for="phone">Phone:</label>
-					<input type="text" class="form-control" id="phone" aria-describedby="basic-addon3">
+				<div class="form-group row">
+					<div class="col-sm-1">
+						<label for="phone">Phone:</label>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control" id="phone" aria-describedby="basic-addon3">
+					</div>
 				</div>
 			</fieldset>
+			
+			<hr/>
 			
 			<!-- Service -->
 			<fieldset class="form-group"> 
-				<legend>Which service did you attend?</legend>
+				<legend>Which service do you attend?</legend>
 				<ul class="service">
 					<li>
 						<input type="radio" id="south" name="selector">
@@ -111,27 +126,14 @@
 					</li>
 				</ul>
 			</fieldset>
-
-				
-			<!-- Connect Groups -->
-<!--
-			<div class="form-group">
-			    <label for="connect-groups">I'm interested in connect groups:</label>
-			    <select class="form-control" id="connect-groups">
-			    	<optgroup label="Central">
-			    	<option>1</option>
-			    	<option>2</option>
-			    	<option>3</option>
-			    	<option>4</option>
-			    	<option>5</option>
-			    	</optgroup>
-			    </select>
-			</div>
--->
 			
+			<hr/>
+			
+			<!-- Connect Groups -->
 			<div class="form-group">
-			    <label for="connect-groups">I'm interested in connect groups:</label>
-			    <select class="selectpicker form-control">
+			    <label class="special" for="connect-groups">I'm interested in connect groups:</label>
+			    <select class="selectpicker form-control" placeholder="Select Group">
+					<option selected disabled>Choose a group</option>
 					<optgroup label="Picnic">
 						<option>Mustard</option>
 						<option>Ketchup</option>
@@ -145,41 +147,43 @@
 				</select>
 			</div>
 						
+			<hr/>
+			
 			<!-- Serving Teams -->
 			<fieldset class="form-group">
 				<legend>I'm interested in serving teams:</legend>
 				<ul class="serving-teams">
-					<li>
+					<li class="families-check">
 						<input type="checkbox" id="families" value="families">
 						<label for="families">Families Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
-					<li>
+					<li class="prayer-check">
 						<input type="checkbox" id="prayer" value="prayer">
 						<label for="prayer">Prayer Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
-					<li>
+					<li class="production-check">
 						<input type="checkbox" id="production" value="production">
 						<label for="production">Production Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
-					<li>
+					<li class="tech-check">
 						<input type="checkbox" id="tech" value="tech">
 						<label for="tech">Tech Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
-					<li>
+					<li class="welcome-check">
 						<input type="checkbox" id="welcome" value="welcome">
 						<label for="welcome">Welcome Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
-					<li>
+					<li class="worship-check">
 						<input type="checkbox" id="worship" value="worship">
 						<label for="worship">Worship Team</label>
 						
@@ -187,6 +191,8 @@
 					</li>
 				</ul>
 			</fieldset>
+			
+			<hr/>
 			
 			<!-- Courses, checklist -->
 			<fieldset class="form-group">
@@ -218,13 +224,27 @@
 					</li>
 				</ul>
 			</fieldset>		
+			
+			<hr/>
 					
 			<!-- Welcome Events opt in -->
 			<div class="form-group">
 				<ul>
 					<li>
 						<input type="checkbox" id="welcome-events" value="welcome-events">
-						<label for="welcome-events">I'd like to know more about welcome events</label>
+						<label for="welcome-events">I'm interested in welcome events</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>	
+			</div>
+			
+			<!-- Welcome Events opt in -->
+			<div class="form-group">
+				<ul>
+					<li>
+						<input type="checkbox" id="kids-work" value="kids-work">
+						<label for="kids-work">I'm interested in the opportunities available for my children at CCLDN</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
@@ -236,7 +256,7 @@
 				<ul>
 					<li>
 						<input type="checkbox" id="newsletter" value="newsletter">
-						<label for="newsletter">I'd like to sign up to CCL newsletter</label>
+						<label for="newsletter">I'd like to sign up to CCLDN newsletter</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
@@ -244,17 +264,19 @@
 			</div>
 			
 			<br/>
-			<button type="submit" class="btn btn-primary btn-submit">Submit ></button>
+			<button type="submit" class="btn-submit">Submit ></button>
 		</form>
 	</div>
 	
-	<footer>
-		<p>By providing your personal details you agree to allow ChristChurch London to contact you by email, telephone or text message in order to give you the best possible welcome and to help you connect with us. We may send you invites to events we are running that we feel may be relevant to you. We will also sign you up to our email list to help you find out about news and events which we think will be of interest to you. To do all this, your information will be transferred outside the EU, and may also be passed to individuals within the church who are organising events for newcomers.</p>
-		<p>Privacy is important to us. We will never disclose your information to anyone outside ChristChurch London without your prior permission.</p>
-		<hr/>
-		<p>Copyright © 2016 ChristChurch London. All rights reserved.</p>
-		<p>ChristChurch London, The Matrix Complex, 91 Peterborough Road, London, SW6 3BU</p>
-	</footer>
+	<div class="footer-wrapper">
+		<footer>
+			<p>By providing your personal details you agree to allow ChristChurch London to contact you by email, telephone or text message in order to give you the best possible welcome and to help you connect with us. We may send you invites to events we are running that we feel may be relevant to you. We will also sign you up to our email list to help you find out about news and events which we think will be of interest to you. To do all this, your information will be transferred outside the EU, and may also be passed to individuals within the church who are organising events for newcomers.</p>
+			<p>Privacy is important to us. We will never disclose your information to anyone outside ChristChurch London without your prior permission.</p>
+			<hr/>
+			<p>Copyright © 2016 ChristChurch London. All rights reserved.</p>
+			<p>ChristChurch London, The Matrix Complex, 91 Peterborough Road, London, SW6 3BU</p>
+		</footer>
+	</div>
 	
 	<!-- Bootstrap core JavaScript
 	================================================== -->
@@ -263,6 +285,7 @@
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-select.js"></script>
+	<script src="js/validator.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>

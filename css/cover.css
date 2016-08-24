@@ -17,7 +17,7 @@
 	  color: white;
 	  font-size: 2.8em;
 	  line-height: 1em;
-	  margin-bottom:8px;
+	  margin-bottom:-16px;
 	  font-weight: 700;
 	  text-transform: uppercase;
 	}
@@ -150,6 +150,10 @@ header {}
 /* The Form + Footer */
 /*Input styling is done in seperate css file*/
 
+.footer-wrapper {
+	background-color: #ddd;
+}
+
 .the-form,
 footer {
 	padding: 16px 20px 20px 20px;
@@ -167,17 +171,35 @@ label, legend {
 	font-weight: 500;
 	font-size: 16px;
 	border: none;
-	margin-bottom: 0;
+	margin-bottom: 2px;
+}
+legend,
+.special {color: black;}
+.special {
+	margin-bottom: 16px;
+}
+.has-error .form-control {/*For the input field with error*/
+	
+}
+.help-block.with-errors li {/*Form Validator classes*/
+	color: red;
 }
 
-
-
-@media (min-width: 768px) {
-   /* Handle the widths */
+@media (min-width: 768px) {/* Handle the widths */
   .the-form,
   footer {
 	padding: 40px 80px 40px 80px;  
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .col-sm-1, .col-sm-2 {/*Col gutter adjust*/
+  	padding-right: 4px;
+  }
+  .col-sm-10, .col-sm-11 {/*Col gutter adjust*/
+  	padding-left: 4px;
+  }
+  .contact .col-sm-1 {
+  	text-align: right;
+  	padding-top: 7px;
   }
 }
 
@@ -199,8 +221,14 @@ label, legend {
  * Footer
  */
 
+.footer-wrapper {
+	background-color: #ddd;
+}
 footer {
-	font-size: 10px;
+	font-size: 12px;
+}
+footer hr {
+	border-top:1px solid #666;
 }
 
 

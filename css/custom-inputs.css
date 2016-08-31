@@ -83,6 +83,7 @@ input[type=checkbox]:checked ~ label{ /*Checked Label Colour*/
 }
 
 /*Families Colour*/
+/*
 li.families-check,
 li.families-check label,
 li.families-check label:hover,
@@ -96,7 +97,9 @@ li.families-check input[type=checkbox]:checked ~ .check {border-color: #ce684b;}
 li.families-check input[type=checkbox]:checked ~ .check::before {
 	background:#ce684b;
 }
+*/
 /*prayer Colour*/
+/*
 li.prayer-check,
 li.prayer-check label,
 li.prayer-check label:hover,
@@ -110,7 +113,9 @@ li.prayer-check input[type=checkbox]:checked ~ .check {border-color: #00b1e8;}
 li.prayer-check input[type=checkbox]:checked ~ .check::before {
 	background:#00b1e8;
 }
+*/
 /*production Colour*/
+/*
 li.production-check,
 li.production-check label,
 li.production-check label:hover,
@@ -124,7 +129,9 @@ li.production-check input[type=checkbox]:checked ~ .check {border-color: #0099a2
 li.production-check input[type=checkbox]:checked ~ .check::before {
 	background:#0099a2;
 }
+*/
 /*tech Colour*/
+/*
 li.tech-check,
 li.tech-check label,
 li.tech-check label:hover,
@@ -138,7 +145,9 @@ li.tech-check input[type=checkbox]:checked ~ .check {border-color: #88449d;}
 li.tech-check input[type=checkbox]:checked ~ .check::before {
 	background:#88449d;
 }
+*/
 /*welcome Colour*/
+/*
 li.welcome-check,
 li.welcome-check label,
 li.welcome-check label:hover,
@@ -152,7 +161,9 @@ li.welcome-check input[type=checkbox]:checked ~ .check {border-color: #fdc216;}
 li.welcome-check input[type=checkbox]:checked ~ .check::before {
 	background:#fdc216;
 }
+*/
 /*worship Colour*/
+/*
 li.worship-check,
 li.worship-check label,
 li.worship-check label:hover,
@@ -166,6 +177,7 @@ li.worship-check input[type=checkbox]:checked ~ .check {border-color: #e30083;}
 li.worship-check input[type=checkbox]:checked ~ .check::before {
 	background:#e30083;
 }
+*/
 
 /*Other stuff*/
 .bootstrap-select .btn-default{

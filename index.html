@@ -132,18 +132,45 @@
 			<!-- Connect Groups -->
 			<div class="form-group">
 			    <label class="special" for="connect-groups">I'm interested in connect groups:</label>
-			    <select class="selectpicker form-control" placeholder="Select Group">
-					<option selected disabled>Choose a group</option>
-					<optgroup label="Picnic">
-						<option>Mustard</option>
-						<option>Ketchup</option>
-						<option>Relish</option>
-					</optgroup>
-					<optgroup label="Camping">
-						<option>Tent</option>
-						<option>Flashlight</option>
-						<option>Toilet Paper</option>
-					</optgroup>
+				<select class="selectpicker form-control" placeholder="Select Group">
+				    <option selected disabled>Choose a group</option>
+				    <optgroup label="South">
+				    	<option id="Clapham">Clapham</option>
+					    <option id="Community Engagement">Community Engagement</option>
+					    <option id="International Affairs">International Affairs</option>
+					    <option id="South Central Estates">South Central Estates</option>
+					    <option id="South Central Neighbourhoods ">South Central Neighbourhoods </option>
+					    <option id="South East">South East</option>
+					    <option id="South West Neighbourhoods">South West Neighbourhoods</option>
+				    </optgroup>
+				    <optgroup label="Central">
+					    <option id="Greenwich and Blackheath">Greenwich and Blackheath</option>
+					    <option id="Canary Wharf">Canary Wharf</option>
+					    <option id="Good Ideas">Good Ideas</option>
+					    <option id="North London">North London</option>
+					    <option id="Outdoor Pursuits">Outdoor Pursuits</option>
+					    <option id="Rainford">Rainford</option>
+					    <option id="Social Justice">Social Justice</option>
+					    <option id="Sutton">Sutton</option>
+					    <option id="Workplaces">Workplaces</option>
+					    <option id="Young Adults Central">Young Adults Central</option>
+					    <option id="Central Students">Central Students</option>
+				    </optgroup>
+				    <optgroup label="West End">
+					    <option id="Covent Garden">Covent Garden</option>
+					    <option id="Highubry and Islington">Highubry and Islington</option>
+					    <option id="Students London Bridge">Students London Bridge</option>
+					    <option id="Students West End">Students West End</option>
+				    </optgroup>
+				    <optgroup label="East">
+					    <option id="Local Communities">Local Communities</option>
+					    <option id="Creatives">Creatives</option>
+					    <option id="Neighbourhoods">Neighbourhoods</option>
+					    <option id="Embrace East">Embrace East</option>
+					    <option id="Reach East">Reach East</option>
+					    <option id="Young Adults">Young Adults</option>
+					    <option id="Students East">Students East</option>
+				    </optgroup>
 				</select>
 			</div>
 						
@@ -239,12 +266,24 @@
 				</ul>	
 			</div>
 			
-			<!-- Welcome Events opt in -->
+			<!-- Kids opt in -->
 			<div class="form-group">
 				<ul>
 					<li>
 						<input type="checkbox" id="kids-work" value="kids-work">
 						<label for="kids-work">I'm interested in the opportunities available for my children at CCLDN</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>	
+			</div>
+			
+			<!-- Students opt in -->
+			<div class="form-group">
+				<ul>
+					<li>
+						<input type="checkbox" id="students" value="students">
+						<label for="students">I'm interested in the opportunities available for students at CCLDN</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>

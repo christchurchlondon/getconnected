@@ -50,19 +50,19 @@
 	</div>
 	
 	<div class="the-form">
-		<form data-toggle="validator" role="form">
+		<form id="foo" data-toggle="validator" role="form">
 			<!-- Who -->
 			<fieldset>
 				<div class="row">
 					<!-- Title -->
 					<div class="form-group col-sm-2">
 						<label for="title">Title:</label>
-						<input type="text" class="form-control" id="title" aria-describedby="basic-addon3">
+						<input type="text" class="form-control" id="title" name="title" aria-describedby="basic-addon3">
 					</div>
 					<!-- Name -->
 					<div class="form-group col-sm-10">
 						<label for="name">Name:</label>
-						<input type="text" class="form-control" id="name" aria-describedby="basic-addon3" required>
+						<input type="text" class="form-control" id="name" name="name" aria-describedby="basic-addon3" required>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -79,7 +79,7 @@
 						<label for="email">Email:</label>
 					</div>
 					<div class="col-sm-11">
-						<input type="email" class="form-control" id="email" aria-describedby="basic-addon3" required>
+						<input type="email" class="form-control" id="email" name="email" aria-describedby="basic-addon3" required>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -89,7 +89,7 @@
 						<label for="phone">Phone:</label>
 					</div>
 					<div class="col-sm-11">
-						<input type="text" class="form-control" id="phone" aria-describedby="basic-addon3">
+						<input type="text" class="form-control" id="phone" name="phone" aria-describedby="basic-addon3">
 					</div>
 				</div>
 			</fieldset>
@@ -101,25 +101,25 @@
 				<legend>Which service do you attend?</legend>
 				<ul class="service">
 					<li>
-						<input type="radio" id="south" name="selector">
+						<input type="radio" id="south" name="service" value="south">
 						<label for="south">South</label>
 						
 						<div class="check"></div>
 					</li>
 					<li>
-						<input type="radio" id="central" name="selector">
+						<input type="radio" id="central" name="service" value="central">
 						<label for="central">Central</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
-						<input type="radio" id="westend" name="selector">
+						<input type="radio" id="westend" name="service" value="west-end">
 						<label for="westend">West End</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
-						<input type="radio" id="east" name="selector">
+						<input type="radio" id="east" name="service" value="east">
 						<label for="east">East</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -132,7 +132,7 @@
 			<!-- Connect Groups -->
 			<div class="form-group">
 			    <label class="special" for="connect-groups">I'm interested in connect groups:</label>
-				<select class="selectpicker form-control" placeholder="Select Group">
+				<select class="selectpicker form-control" placeholder="Select Group" name="connect-groups">
 				    <option selected disabled>Choose a group</option>
 				    <optgroup label="South">
 				    	<option id="Clapham">Clapham</option>
@@ -181,37 +181,37 @@
 				<legend>I'm interested in serving teams:</legend>
 				<ul class="serving-teams">
 					<li class="families-check">
-						<input type="checkbox" id="families" value="families">
+						<input type="checkbox" id="families" name="families" value="yes-families">
 						<label for="families">Families Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li class="prayer-check">
-						<input type="checkbox" id="prayer" value="prayer">
+						<input type="checkbox" id="prayer" name="prayer" value="yes-prayer">
 						<label for="prayer">Prayer Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li class="production-check">
-						<input type="checkbox" id="production" value="production">
+						<input type="checkbox" id="production" name="production" value="yes-production">
 						<label for="production">Production Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li class="tech-check">
-						<input type="checkbox" id="tech" value="tech">
+						<input type="checkbox" id="tech" name="tech" value="yes-tech">
 						<label for="tech">Tech Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li class="welcome-check">
-						<input type="checkbox" id="welcome" value="welcome">
+						<input type="checkbox" id="welcome" name="welcome" value="yes-welcome">
 						<label for="welcome">Welcome Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li class="worship-check">
-						<input type="checkbox" id="worship" value="worship">
+						<input type="checkbox" id="worship" name="worship" value="yes-worship">
 						<label for="worship">Worship Team</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -226,25 +226,25 @@
 				<legend>I'm interested in courses:</legend>
 				<ul>
 					<li>
-						<input type="checkbox" id="alpha" value="alpha">
+						<input type="checkbox" id="alpha" name="alpha" value="yes-alpha">
 						<label for="alpha">Alpha</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
-						<input type="checkbox" id="marriage-preparation" value="marriage-preparation">
+						<input type="checkbox" id="marriage-preparation" name="marriage-preparation" value="yes-marriage-preparation">
 						<label for="marriage-preparation">Marriage Preparation</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
-						<input type="checkbox" id="pastoral-support" value="pastoral-support">
+						<input type="checkbox" id="pastoral-support" name="pastoral-support" value="yes-pastoral-support">
 						<label for="pastoral-support">Pastoral Support</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
-						<input type="checkbox" id="steps" value="steps">
+						<input type="checkbox" id="steps" name="steps" value="yes-steps">
 						<label for="steps">Steps</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -258,7 +258,7 @@
 			<div class="form-group">
 				<ul>
 					<li>
-						<input type="checkbox" id="welcome-events" value="welcome-events">
+						<input type="checkbox" id="welcome-events" name="welcome-events" value="yes-welcome-events">
 						<label for="welcome-events">I'm interested in welcome events</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -270,7 +270,7 @@
 			<div class="form-group">
 				<ul>
 					<li>
-						<input type="checkbox" id="kids-work" value="kids-work">
+						<input type="checkbox" id="kids-work" name="kids-work" value="yes-kids-work">
 						<label for="kids-work">I'm interested in the opportunities available for my children at CCLDN</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -282,7 +282,7 @@
 			<div class="form-group">
 				<ul>
 					<li>
-						<input type="checkbox" id="students" value="students">
+						<input type="checkbox" id="students" name="students" value="yes-students">
 						<label for="students">I'm interested in the opportunities available for students at CCLDN</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -294,7 +294,7 @@
 			<div class="form-group">
 				<ul>
 					<li>
-						<input type="checkbox" id="newsletter" value="newsletter">
+						<input type="checkbox" id="newsletter" name="newsletter" value="yes-newsletter">
 						<label for="newsletter">I'd like to sign up to CCLDN newsletter</label>
 						
 						<div class="check"><div class="inside"></div></div>
@@ -327,5 +327,6 @@
 	<script src="js/validator.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/google-sheet.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
 	  color: white;
 	  font-size: 2.8em;
 	  line-height: 1em;
-	  margin-bottom:-16px;
+/* 	  margin-bottom:-16px; */
 	  font-weight: 700;
 	  text-transform: uppercase;
 	}
@@ -41,6 +41,7 @@
 	h1 {
 		font-size: 5em;
 		line-height: 1em;
+		margin-bottom:-16px;
 	}	
 	h2 {
 		font-size: 1.3em;
@@ -185,6 +186,16 @@ legend,
 	color: red;
 }
 
+.students label,
+.socialAction label  {
+	padding-bottom: 35px;
+}
+
+.kidsWork label {
+	padding-bottom: 55px;
+}
+
+
 @media (min-width: 768px) {/* Handle the widths */
   .the-form,
   footer {
@@ -200,6 +211,11 @@ legend,
   .contact .col-sm-1 {
   	text-align: right;
   	padding-top: 7px;
+  }
+  .students label,
+  .socialAction label,
+  .kidsWork label  {
+	padding-bottom: 25px;
   }
 }
 

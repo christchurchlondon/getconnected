@@ -6,7 +6,7 @@ var request;
 $('#foo').validator().on('submit', function (e) {
   if (e.isDefaultPrevented()) {// handle the invalid form...
   } else { // everything looks good!
-  
+  	    
 	    // Abort any pending request
 	    if (request) {
 	        request.abort();
@@ -39,7 +39,7 @@ $('#foo').validator().on('submit', function (e) {
 	        console.log(response);
 	        console.log(textStatus);
 	        console.log(jqXHR);
-	        window.location.href = "/thank-you.html";
+	        location.href = "/thank-you.html";
 	    });
 	
 	    // Callback handler that will be called on failure
@@ -49,6 +49,7 @@ $('#foo').validator().on('submit', function (e) {
 	            "The following error occurred: "+
 	            textStatus, errorThrown
 	        );
+	        location.href = "/thank-you.html";
 	    });
 	
 	    // Callback handler that will be called regardless

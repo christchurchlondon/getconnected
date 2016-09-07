@@ -79,7 +79,7 @@
 						<label for="email">Email:</label>
 					</div>
 					<div class="col-sm-11">
-						<input type="email" class="form-control" id="email" name="email" aria-describedby="basic-addon3" required>
+						<input type="email" class="form-control" id="email" name="email" aria-describedby="basic-addon3">
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -89,7 +89,8 @@
 						<label for="phone">Phone:</label>
 					</div>
 					<div class="col-sm-11">
-						<input type="text" class="form-control" id="phone" name="phone" aria-describedby="basic-addon3">
+						<input type="number" class="form-control" id="phone" name="phone" aria-describedby="basic-addon3">
+					<div class="help-block with-errors"></div>
 					</div>
 				</div>
 			</fieldset>
@@ -232,8 +233,26 @@
 						<div class="check"><div class="inside"></div></div>
 					</li>
 					<li>
+						<input type="checkbox" id="emotional-health" name="emotional-health" value="yes-emotional-health">
+						<label for="emotional-health">Emotional Health Sessions</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="grief-share" name="grief-share" value="yes-grief-share">
+						<label for="grief-share">Grief Share</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
 						<input type="checkbox" id="marriage-preparation" name="marriage-preparation" value="yes-marriage-preparation">
 						<label for="marriage-preparation">Marriage Preparation</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+					<li>
+						<input type="checkbox" id="mens-recovery" name="mens-recovery" value="yes-mens-recovery">
+						<label for="mens-recovery">Mens Recovery</label>
 						
 						<div class="check"><div class="inside"></div></div>
 					</li>
@@ -255,7 +274,7 @@
 			<hr/>
 					
 			<!-- Welcome Events opt in -->
-			<div class="form-group">
+			<div class="form-group welcomeEvents">
 				<ul>
 					<li>
 						<input type="checkbox" id="welcome-events" name="welcome-events" value="yes-welcome-events">
@@ -267,7 +286,7 @@
 			</div>
 			
 			<!-- Kids opt in -->
-			<div class="form-group">
+			<div class="form-group kidsWork">
 				<ul>
 					<li>
 						<input type="checkbox" id="kids-work" name="kids-work" value="yes-kids-work">
@@ -278,8 +297,20 @@
 				</ul>	
 			</div>
 			
+			<!-- Social Action opt in -->
+			<div class="form-group socialAction">
+				<ul>
+					<li>
+						<input type="checkbox" id="social-action" name="social-action" value="yes-social-action">
+						<label for="social-action">I'm interested in hearing about CCLDN's social action projects</label>
+						
+						<div class="check"><div class="inside"></div></div>
+					</li>
+				</ul>	
+			</div>
+			
 			<!-- Students opt in -->
-			<div class="form-group">
+			<div class="form-group students">
 				<ul>
 					<li>
 						<input type="checkbox" id="students" name="students" value="yes-students">
@@ -291,7 +322,7 @@
 			</div>
 			
 			<!-- Newsletter opt in -->
-			<div class="form-group">
+			<div class="form-group newsletter">
 				<ul>
 					<li>
 						<input type="checkbox" id="newsletter" name="newsletter" value="yes-newsletter">

@@ -27,7 +27,7 @@ $('#foo').validator().on('submit', function (e) {
 	
 	    // Fire off the request to /form.php
 	    request = $.ajax({
-	        url: "https://script.google.com/macros/s/AKfycbzpdnpIMPAau79puKy6z9YmdpYVedh9z1vTyqZIis26yhyLLFE/exec",
+	        url: "https://script.google.com/macros/s/AKfycbwvl6jPC2KgZyLSLGjU6aqU_v0_v8E1CR3AOP0ATVxCT6BmV3Rs/exec",
 	        type: "post",
 	        data: serializedData
 	    });
